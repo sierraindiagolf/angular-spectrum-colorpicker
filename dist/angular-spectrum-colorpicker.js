@@ -12,6 +12,7 @@
   'use strict';
 
   // src/js/helper.module.js
+  /* jshint unused: false, -W079 */
   var angularSpectrumColorpicker = angular.module('angularSpectrumColorpicker', []);
 
   // src/js/spectrumColorpicker.directive.js
@@ -69,7 +70,7 @@
           }
   
           var onChange = function(color) {
-            $scope.$apply(function() {
+            $scope.$applyAsync(function() {
               setViewValue(color);
             });
           };
@@ -149,7 +150,7 @@
     'use strict';
   
     $templateCache.put('directive.html',
-      "<span><input class=input-small></span>"
+      "<span><input class=\"input-small\"></span>"
     );
   
   }]);
